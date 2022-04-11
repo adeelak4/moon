@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="style.css">
+
+ 
+   <script>
+// function getdata() {
+//     console.log("Started get data")
+//     url = "http://api.github.com/users";
+//      fetch(url).then((responce) => {
+//         console.log("inside first then ")
+//         return responce.json();
+//     }).then((data) => {
+//         console.log("secondd then")
+//         console.log(data)
+//     })
+
+// }
+// getdata();
+
+function postdata(){
+    url = "http://dummy.restapiexample.com/api/v1/create";
+    data = 	'{"name":"afa","salary":"90000","age":"23"}';
+    param = {
+        method:'post',
+        header:{'content-type':'aplication/json'}
+        ,body:data
+    }
+fetch(url,param).then(responce=>responce.json()).then(data=>console.log(data))
+    
+
+}
+postdata();
+
+
+
+function G_account()
+{
+document.getElementById('box').innerHTML = "email: adeelafzal2015@gmail.com password:03340215022<br>email: ad03333986720@gmail.com password:dragonballz2019<br>email: eb19103049adeelafzal@gmail.com password:eb19103049"
+}
+function Fiver_account()
+{
+document.getElementById('box').innerHTML = "email: adeelafzal2015@gmail.com password:Dragonballz2019"
+}
+function Payoneer_account()
+{
+document.getElementById('box').innerHTML = "email: adeelafzal2015@gmail.com password:dragonballz2021"
+}
+function Facebook_account()
+{
+document.getElementById('box').innerHTML = "email: ad03333986720@gmail.com password:adeelafzal2019<br>email: 03340215022 password:dragonballz2021"
+}
+function Freelancer_account()
+{
+document.getElementById('box').innerHTML = "email: adeelafzal2015@gmail.com password:dragonballz2020"
+}
+    </script>
+</head>
+<body>
+<div class ="container">
+    <header><h1>MYCOMPLETE WORLD</h1></header>
+    
+    
+    <input type="button" value="show google account" onclick="G_account()">
+    <input type="button" value="show fiver account" onclick="Fiver_account()">
+    <input type="button" value="show Payoneer account" onclick="Payoneer_account()">
+    <input type="button" value="show Facebook account" onclick="Facebook_account()">
+    <input type="button" value="show Freelancer account" onclick="Freelancer_account()">
+
+
+    <div id="box"></div>
+
+</div>
+</body>
+</html>
